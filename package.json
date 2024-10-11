@@ -1,0 +1,30 @@
+{
+    "name": "admin-app",
+    "version": "1.0.0",
+    "description": "Aplicación administrativa",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js"
+    },
+    "dependencies": {
+        "@getbrevo/brevo": "^2.2.0",
+        "axios": "^1.7.2",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "jsonwebtoken": "^8.5.1",
+        "moment-timezone": "^0.5.45",
+        "mysql2": "^2.2.5",
+        "nodemailer": "^6.9.14",
+        "nodemailer-sendinblue-transport": "^2.0.1",
+        "sequelize": "^6.6.5"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.15",
+        "sequelize-cli": "^6.6.2"
+    },
+    "author": "",
+    "license": "ISC"
+}
