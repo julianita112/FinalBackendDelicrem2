@@ -32,7 +32,7 @@ dotenv.config();
 
 // Configuración de CORS para permitir todos los orígenes
 app.use(cors({
-  origin: 'https://delicrem-fm7p.onrender.com/', // Permitir todos los orígenes
+  origin: 'https://delicrem-fm7p.onrender.com', // Permitir todos los orígenes
   methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos HTTP permitidos
   credentials: true, // Permitir el envío de cookies y encabezados de autenticación
 }));
