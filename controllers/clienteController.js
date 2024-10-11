@@ -81,21 +81,14 @@ exports.cambiarEstadoCliente = async (req, res) => {
 };
 
 exports.editarCliente = async (req, res) => {
-  const { nombre, contacto, email, tipo_documento, numero_documento } = req.body;
   try {
-    const [updated] = await Cliente.update({ nombre, contacto, email, tipo_documento, numero_documento }, {
-      where: { id_cliente: req.params.id }
-    });
-    if (updated) {
-      const updatedCliente = await Cliente.findByPk(req.params.id);
-      res.json(updatedCliente);
-    } else {
-      res.status(404).json({ error: 'Cliente no encontrado' });
-    }
-  } catch (error) {
+    const cliente = await Cliente.update(req.body, { where: { id_cliente: req.params.id } });
+    res.json(cliente);
+} catch (error) {
     res.status(500).json({ error: error.message });
-  }
+}
 };
+
 
 exports.eliminarCliente = async (req, res) => {
   try {
